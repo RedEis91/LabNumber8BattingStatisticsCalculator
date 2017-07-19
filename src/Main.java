@@ -43,20 +43,20 @@ public class Main {
                         earnedBase++;
                                             }
                 }
+            System.out.println();
             //after all of the at-bats are entered, display the batting average and slugging percentage of the batter
             double battingAvg = 0.000;
             //only calculates batting average if bases were earned, to prevent a divide by zero error
             if (earnedBase > 0) {battingAvg =   earnedBase / (double)atBats; }
-            //converts double into string to ensure 3 decimal places
-            String avg = String.format("%.4g%n", battingAvg);
-            //output results to user
-            System.out.println(playerName+ "'s batting average: " + avg);
+            //convert double into string to ensure 3 decimal places
+            String avg = String.format("%.3g%n", battingAvg);
             // and slugging percentage of the batter
             double sluggingPercentage = 0.000;
             sluggingPercentage = bases/ (double)atBats;
-            //converts double into string to ensure 3 decimal places
+            //converts double into string to ensure 4 decimal places
             String slug = String.format("%.4g%n", sluggingPercentage);
             //output results to user
+            System.out.println(playerName+ "'s batting average: " + avg);
             System.out.println(playerName+ "'s slugging percentage: " + slug);
             System.out.println();
             //prompt user for another batter
